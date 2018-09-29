@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Forward-Proxy">
+    <output-path>$PROJECT_DIR$/out/artifacts/Forward_Proxy</output-path>
+    <root id="archive" name="Forward-Proxy.jar">
+      <element id="module-output" name="Forward-Proxy" />
+    </root>
+  </artifact>
+</component>
