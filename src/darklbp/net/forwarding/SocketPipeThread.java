@@ -17,9 +17,10 @@ public class SocketPipeThread extends Thread {
     private void pipe(InputStream in, OutputStream out) {
         new Thread(() -> {
             try {
+                byte[] buffer = new byte[8192];
                 int read;
-                while ((read = in.read()) != -1) {
-                    out.write(read);
+                while ((read = in.read(buffer)) != -1) {
+                    out.write(buffer, 0, read);
                 }
             } catch (IOException ex) {
                 interrupt();
